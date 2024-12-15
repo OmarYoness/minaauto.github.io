@@ -59,17 +59,22 @@ body {
 .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1000;
+    padding: 5px;
 }
 
 .logo img {
     height: 50px;
     width: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
     transition: all 0.3s ease;
     filter: brightness(1.2);
-    z-index: 2;
-    display: block;
-    max-height: 50px;
-    object-fit: contain;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .nav-links {
@@ -1766,4 +1771,25 @@ img {
 .logo {
   position: relative;
   z-index: 1; /* Adjust as needed */
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 768px) {
+    .logo {
+        padding: 5px 10px; /* Increase touch area */
+    }
+    
+    .logo img {
+        height: 40px; /* Slightly smaller on mobile */
+        width: auto;
+        max-width: 200px; /* Prevent oversized logos */
+    }
+}
+
+/* Fix for iOS devices */
+@supports (-webkit-touch-callout: none) {
+    .logo img {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
 }

@@ -69,7 +69,7 @@ body {
     width: auto;
     transition: all 0.3s ease;
     filter: brightness(1.2);
-    content: url('../assets/images/MinaAuto.png');
+    content: url('assets\images\MinaAuto.png');
 }
 
 .nav-links {

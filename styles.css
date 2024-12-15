@@ -1726,4 +1726,21 @@ textarea {
     font-size: 16px !important; /* Prevent zoom on iOS */
     border-radius: 0; /* Remove rounded corners on iOS */
     -webkit-appearance: none; /* Remove default styling */
+    appearance: none; /* Standard property for compatibility */
+}
+
+/* Add this to your styles.css */
+.responsive-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Add media queries for mobile devices */
+@media screen and (max-width: 768px) {
+    .responsive-logo {
+        width: 80%;
+        max-width: 300px;
+    }
 }

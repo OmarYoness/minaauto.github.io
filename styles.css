@@ -1735,12 +1735,35 @@ textarea {
     height: auto;
     display: block;
     margin: 0 auto;
+    opacity: 1; /* Make sure logo isn't transparent */
+    visibility: visible; /* Ensure logo is visible */
 }
 
 /* Add media queries for mobile devices */
 @media screen and (max-width: 768px) {
     .responsive-logo {
         width: 80%;
-        max-width: 300px;
+        max-width: 250px;
+        object-fit: contain;
+        display: block; /* Ensure it's visible on mobile */
     }
+}
+
+/* Check if there are any conflicting styles */
+img {
+    display: block; /* Make sure global img styles aren't interfering */
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    /* Mobile-specific styles */
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.logo {
+  position: relative;
+  z-index: 1; /* Adjust as needed */
 }

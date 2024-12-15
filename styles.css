@@ -1793,3 +1793,73 @@ img {
         backface-visibility: hidden;
     }
 }
+
+/* Text Logo Styles */
+.text-logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.text-logo::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #C41E3A;
+    transition: width 0.3s ease;
+}
+
+.text-logo:hover {
+    color: #C41E3A;
+}
+
+.text-logo:hover::after {
+    width: 100%;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+    .text-logo {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+}
+
+/* Update existing logo class */
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Footer Text Logo Styles */
+.footer-text-logo {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    color: #FFFFFF;
+}
+
+.footer-text-logo:hover {
+    color: #C41E3A;
+}
+
+.footer-text-logo::after {
+    bottom: -3px;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+    .footer-text-logo {
+        font-size: 1.4rem;
+    }
+}
